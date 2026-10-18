@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="Little Us Game, permainan kecil berisi pertanyaan manis dan surat rahasia.">
+  <title>Little Us Game ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>♥</span><span>♡</span>
+    <span>♥</span><span>♡</span><span>♥</span>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <a href="#" class="brand" id="homeLink">little us <span>♡</span></a>
+      <span class="top-note">a tiny game for you</span>
+    </header>
+
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <div class="hero-art" aria-hidden="true">
+          <span class="sparkle s1">✦</span>
+          <span class="sparkle s2">✧</span>
+          <div class="heart-big">♥</div>
+          <div class="heart-small">♡</div>
+        </div>
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>just the two<br>of <span>us.</span></h1>
+        <p class="description">
+          beberapa pertanyaan kecil, sedikit rasa penasaran,
+          dan satu pesan yang mungkin ingin kamu baca.
+        </p>
+        <button id="startBtn" class="btn btn-primary">
+          mulai permainan <span>♡</span>
+        </button>
+        <p class="tiny-note">no pressure, just have fun!</p>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen" hidden>
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span id="questionNumber">PERTANYAAN 01 / 06</span>
+          <span id="progressPercent">17%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-fill"></div>
+        </div>
+        <div class="quiz-icon">♡</div>
+        <p class="eyebrow">LET'S GET TO KNOW YOU</p>
+        <h2 id="questionText">Pertanyaan akan muncul di sini.</h2>
+        <p id="questionHint" class="question-hint">pilih jawaban yang paling kamu suka</p>
+        <div id="answerList" class="answer-list"></div>
+        <p id="answerFeedback" class="answer-feedback" aria-live="polite"></p>
+        <button id="nextBtn" class="btn btn-primary" disabled>
+          lanjut <span>→</span>
+        </button>
+        <button id="quitBtn" class="text-btn">kembali ke awal</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen" hidden>
+      <div class="result-card">
+        <div class="result-stamp">♡</div>
+        <p class="eyebrow">YOU MADE IT!</p>
+        <h2 id="resultTitle">that was sweet.</h2>
+        <p id="resultDescription" class="description"></p>
+        <div class="score-box">
+          <span class="score-label">your little score</span>
+          <strong id="scoreValue">0 / 6</strong>
+          <span class="score-caption">just for fun, not a real compatibility test ♡</span>
+        </div>
+        <button id="letterBtn" class="btn btn-primary">
+          ada sesuatu untukmu <span>💌</span>
+        </button>
+        <button id="replayBtn" class="btn btn-secondary">main lagi ↻</button>
+      </div>
+    </section>
+
+    <section id="letterScreen" class="screen" hidden>
+      <div class="letter-card">
+        <p class="eyebrow">A LETTER, JUST FOR YOU</p>
+        <h2>surat kecil <span>♡</span></h2>
+        <p class="description">
+          isi bagian di bawah ini sesuai keinginanmu.
+          suratnya akan dibuat khusus untuk seseorang.
+        </p>
+
+        <form id="letterForm" class="letter-form">
+          <label for="recipient">nama penerima</label>
+          <input id="recipient" type="text" maxlength="50"
+            placeholder="nama orang yang kamu tuju">
+
+          <label for="sender">nama pengirim</label>
+          <input id="sender" type="text" maxlength="50"
+            placeholder="nama kamu">
+
+          <label for="message">isi surat rahasia</label>
+          <textarea id="message" rows="5" maxlength="1500"
+            placeholder="ada sesuatu yang ingin aku bilang..."></textarea>
+
+          <button type="submit" class="btn btn-primary">
+            buka suratku <span>♡</span>
+          </button>
+        </form>
+
+        <article id="letterOutput" class="letter-output" hidden>
+          <div class="letter-top">a little letter for you ♡</div>
+          <p id="letterGreeting" class="letter-greeting"></p>
+          <p id="letterBody" class="letter-body"></p>
+          <p id="letterSignature" class="letter-signature"></p>
+          <button id="copyBtn" class="btn btn-primary">
+            salin surat <span>↗</span>
+          </button>
+          <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+          <button id="editLetterBtn" class="text-btn">edit surat</button>
+        </article>
+
+        <button id="backResultBtn" class="text-btn">← kembali ke hasil</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>made with a little feeling ♡</span>
+      <span>little us game · 2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+  </html>
+  
